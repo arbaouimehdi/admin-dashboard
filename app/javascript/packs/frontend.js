@@ -4,6 +4,7 @@
  #
  ==================================*/
 import '../src/frontend.scss'
+import 'images/frontend/logos/logo.png'
 
 /**==================================
  #

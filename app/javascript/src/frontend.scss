@@ -1,24 +1,33 @@
-/*==================================
-#
-#       External Dependencies
-#
-==================================*/
-@import '~font-awesome/scss/font-awesome';
-@import '~bootstrap/dist/css/bootstrap';
+/**
+*
+*
+* Frontend Styles
+*
+*
+*/
 
 /*==================================
 #
-#               Common
+#          External Libraries
 #
 ==================================*/
-@import '~stylesheets/frontend/common/variables.scss';
-@import '~stylesheets/frontend/common/fonts.scss';
+@import '../../../node_modules/bootstrap/dist/css/bootstrap-grid';
 
 /*==================================
 #
-#             Layouts
+#               Configs
 #
 ==================================*/
-@import '~stylesheets/frontend/layouts/header.scss';
-@import '~stylesheets/frontend/layouts/login.scss';
-@import '~stylesheets/frontend/responsive/responsive.scss';
+@import '../../assets/stylesheets/frontend/common/fonts';
+@import '../../assets/stylesheets/frontend/common/variables';
+
+/*==================================
+#
+#               Layouts
+#
+==================================*/
+@import '../../assets/stylesheets/frontend/layouts/body';
+@import '../../assets/stylesheets/frontend/layouts/login';
+
+
+

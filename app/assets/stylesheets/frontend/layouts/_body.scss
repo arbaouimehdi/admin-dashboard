@@ -1,0 +1,31 @@
+/**
+*
+*
+* Body
+*
+*
+*/
+body {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.5;
+  color: #212529;
+  background-color: #fff;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  font-weight: 300;
+  font-family: "Poppins", sans-serif;
+  text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+img {
+  vertical-align: middle;
+  border-style: none;
+}

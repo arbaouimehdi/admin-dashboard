@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
 
+  # Devise
+  devise_for :users
+
   #
   #
   #
@@ -14,7 +17,6 @@ Rails.application.routes.draw do
   # Frontend
   scope module: 'frontend' do
     root 'home#index'
-    devise_for :users
   end
 
 end

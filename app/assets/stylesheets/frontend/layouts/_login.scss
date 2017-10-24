@@ -1,0 +1,58 @@
+/**
+*
+*
+* Login
+*
+*
+*/
+#login {
+  height: 100%;
+  display: table;
+  width: 100%;
+  background: white;
+  overflow: hidden;
+
+  //
+  //
+  // Container
+  .login-container {
+    margin: 0 auto;
+    display: table-cell;
+    padding-top: 50px;
+    text-align: center;
+  }
+
+  .login-title {
+    padding-top: 6rem;
+  }
+
+  .login-wrapper {
+    display: table;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  //
+  //
+  // Infos
+  .login-infos {
+    display: table-cell;
+    width: 50%;
+    .login-infos-content {
+      width: 500px;
+      margin: 0 auto;
+      padding: 1rem 1.5rem;
+    }
+  }
+
+  //
+  //
+  // Form
+  .login-form {
+    padding-top: 13%;
+    display: table-cell;
+    width: 50%;
+  }
+
+
+}
