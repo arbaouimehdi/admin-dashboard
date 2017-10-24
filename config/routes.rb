@@ -3,16 +3,18 @@ Rails.application.routes.draw do
   #
   #
   #
-  # Backend - Admin
-  namespace :admin do
-
+  # Backend
+  namespace :backend do
+    root 'dashboard#index'
   end
 
   #
   #
   #
   # Frontend
-  root to: 'home#index'
-  devise_for :users
+  scope module: 'frontend' do
+    root 'home#index'
+    devise_for :users
+  end
 
 end

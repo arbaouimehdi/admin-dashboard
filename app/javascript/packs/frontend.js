@@ -3,7 +3,7 @@
  #             + CSS File
  #
  ==================================*/
-import '../src/application.scss'
+import '../src/frontend.scss'
 
 /**==================================
  #
@@ -19,18 +19,18 @@ import 'bootstrap';
 /*==================================
 #         Local dependencies
 ==================================*/
-import Router from 'javascripts/util/Router';
+import Router from 'javascripts/frontend/util/Router';
 
 /*==================================
  #              Pages
  ==================================*/
-import home from 'javascripts/routes/home';
+import home from 'javascripts/frontend/routes/home';
 
 /*==================================
  #              Layout
  ==================================*/
-import plugins from 'javascripts/layout/plugins';
-import uis from 'javascripts/layout/uis';
+import plugins from 'javascripts/frontend/layout/plugins';
+import uis from 'javascripts/frontend/layout/uis';
 
 
 /*==================================

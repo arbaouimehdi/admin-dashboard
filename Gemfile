@@ -43,7 +43,6 @@ group :development, :test do
   gem 'database_cleaner', "~> 1.6", ">= 1.6.1"
   gem 'guard-rspec', "~> 4.7", ">= 4.7.3", require: false
   gem 'awesome_print', "~> 1.8", require: "ap"
-  gem 'factory_girl_rails'
 end
 
 # Development
@@ -54,7 +53,7 @@ group :development do
   gem 'spring-watcher-listen', '~> 2.0.0'
 
   # Better errors handler
-  gem 'better_errors', '~> 2.1.0'
+  #gem 'better_errors', '~> 2.1.0'
   gem 'binding_of_caller', '~> 0.7.2'
 end
 

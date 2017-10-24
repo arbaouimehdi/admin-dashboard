@@ -11,14 +11,14 @@
 #               Common
 #
 ==================================*/
-@import '~stylesheets/common/variables.scss';
-@import '~stylesheets/common/fonts.scss';
+@import '~stylesheets/frontend/common/variables.scss';
+@import '~stylesheets/frontend/common/fonts.scss';
 
 /*==================================
 #
 #             Layouts
 #
 ==================================*/
-@import '~stylesheets/layouts/header.scss';
-@import '~stylesheets/layouts/login.scss';
-@import '~stylesheets/responsive/responsive.scss';
+@import '~stylesheets/frontend/layouts/header.scss';
+@import '~stylesheets/frontend/layouts/login.scss';
+@import '~stylesheets/frontend/responsive/responsive.scss';
