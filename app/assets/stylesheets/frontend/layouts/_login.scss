@@ -78,6 +78,10 @@
     .login-signin {
       display: block;
     }
+    .login-title {
+      text-align: center;
+      font-size: 1.5rem;
+    }
     .login-head {
       margin-top: 1rem;
     }
@@ -85,6 +89,47 @@
       width: 430px;
       margin: 0 auto;
       padding: 0 1.5rem;
+    }
+    .login-form-action {
+      margin: 3rem 0 3rem 0;
+      text-align: center;
+    }
+    form {
+      margin-top: 4rem;
+      .form__group {
+        margin: 0;
+        padding: 0;
+        position: relative;
+        .form-control {
+          border-radius: 0;
+          border: 0;
+          border-bottom: 1px solid #ebedf2;
+          padding: 1rem 0;
+          margin-top: 0.1rem;
+          &.last-input {
+            border-bottom: 0;
+          }
+        }
+      }
+      .form-sub {
+        margin-top: 2rem;
+        .col {
+          label {
+            font-size: 1rem;
+          }
+          input[type="checkbox"] {
+            position: absolute;
+            z-index: -1;
+            opacity: 0;
+          }
+        }
+
+      }
+    }
+    .btn {
+      display: inline-block;
+      text-align: center;
+      padding: 1.2rem 3rem;
     }
   }
 

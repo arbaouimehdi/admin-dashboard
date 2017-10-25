@@ -33,48 +33,66 @@
   <div class="login-form">
     <div class="login-container">
       <div class="login-signin">
+
+        <!-- # Title-->
         <div class="login-head">
           <h3 class="login-title">Login To Your Account</h3>
         </div>
+
+        <!-- # Form-->
+        <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+
+          <!-- # Errors Messages -->
+          <%- flash.each do |name, msg| -%>
+            <div class="m-alert m-alert-outline alert alert-danger alert-dismissible" role="alert">
+              <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+              <span><%= msg %></span>
+            </div>
+          <%- end -%>
+
+          <!-- # Inputs -->
+          <div class="form-group form__group">
+            <%= f.email_field :email, class: 'form-control', placeholder: 'Username' %>
+          </div>
+          <div class="form-group form__group">
+            <%= f.password_field :password, class: 'form-control last-input', placeholder: 'Password' %>
+          </div>
+
+          <!-- # Actions -->
+          <div class="row form-sub">
+
+            <!-- # Remember Me-->
+            <% if devise_mapping.rememberable? -%>
+              <div class="col m--align-left">
+                <label class="m-checkbox m-checkbox--focus">
+                  <%= f.check_box :remember_me %>
+                  Remember me
+                  <span></span>
+                </label>
+              </div>
+            <% end -%>
+
+            <!-- # Forgot Password -->
+            <div class="col m--align-right">
+              <a href="javascript:;" class="link">
+                Forget Password ?
+              </a>
+            </div>
+
+          </div>
+
+          <!-- # Button -->
+          <div class="login-form-action">
+            <%= f.submit 'Sign In', class: 'btn btn-focus m-btn btn-pill btn-air' %>
+          </div>
+
+        <% end %>
+
       </div>
     </div>
   </div>
 
 </div>
 
-
-
-
-
-
-
-<div style="display: none">
-
-  <h2>Log in</h2>
-
-  <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-      <div class="field">
-        <%= f.label :email %><br/>
-        <%= f.email_field :email, autofocus: true %>
-      </div>
-
-      <div class="field">
-        <%= f.label :password %><br/>
-        <%= f.password_field :password, autocomplete: "off" %>
-      </div>
-
-      <% if devise_mapping.rememberable? -%>
-          <div class="field">
-            <%= f.check_box :remember_me %>
-            <%= f.label :remember_me %>
-          </div>
-      <% end -%>
-
-      <div class="actions">
-        <%= f.submit "Log in" %>
-      </div>
-  <% end %>
-
-  <%= render 'devise/shared/links' %>
-
-</div>
