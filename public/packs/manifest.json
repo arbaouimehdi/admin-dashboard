@@ -1,0 +1,8 @@
+{
+  "_/assets/images/frontend/bg/bg.jpg": "/packs/_/assets/images/frontend/bg/bg-6ecf79dbb9a59248510d64773993254e.jpg",
+  "_/assets/images/frontend/logos/logo.png": "/packs/_/assets/images/frontend/logos/logo-2a5aacb08ca2b53000cce3132109490c.png",
+  "backend.css": "/packs/backend-d41d8cd98f00b204e9800998ecf8427e.css",
+  "backend.js": "/packs/backend-ad109da9a025e5ceb8d0.js",
+  "frontend.css": "/packs/frontend-2727968b2e9919eed52bb695ee28616a.css",
+  "frontend.js": "/packs/frontend-954e755446d38787817a.js"
+}
