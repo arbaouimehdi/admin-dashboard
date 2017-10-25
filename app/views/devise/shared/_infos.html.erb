@@ -1,0 +1,31 @@
+<div class="login-infos">
+  <div class="login-wrapper">
+    <div class="login-container">
+      <div class="login-content">
+        <div class="login-logo">
+          <a href="#">
+            <img src="<%= asset_pack_path '_/assets/images/frontend/logos/logo.png' %>"/>
+          </a>
+        </div>
+        <div class="login-title">
+          <h3>
+            Join Our Great Metro Community Get Free Account
+          </h3>
+        </div>
+        <div class="login-description">
+          Amazing Stuff is Lorem Here.Grownng Team
+        </div>
+
+        <%- if devise_mapping.registerable? && controller_name != 'registrations' %>
+          <div class="login-form-action">
+            <%= link_to 'Get An Account', new_registration_path(resource_name), class: 'btn btn-outline-focus' %>
+          </div>
+        <% end -%>
+
+      </div>
+    </div>
+    <div class="login-border">
+      <div></div>
+    </div>
+  </div>
+</div>
