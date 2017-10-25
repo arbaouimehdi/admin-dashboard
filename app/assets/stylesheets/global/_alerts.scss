@@ -1,0 +1,21 @@
+/**
+*
+*
+* Alerts
+*
+*
+*/
+@import 'variables';
+.m-alert-outline {
+  background-color: #fff;
+  border-color: $danger;
+  color: $danger;
+  font-weight: 400;
+}
+.close {
+  cursor: pointer;
+  &:hover {
+    color: inherit;
+    opacity: .75;
+  }
+}

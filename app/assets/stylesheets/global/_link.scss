@@ -1,0 +1,37 @@
+/**
+*
+*
+* Link
+*
+*
+*/
+@import 'variables';
+
+.link {
+  text-decoration: none;
+  position: relative;
+  display: inline-block;
+  color: $brand;
+
+  &:after {
+    display: block;
+    content: '';
+    position: absolute;
+    bottom: 0;
+    top: 1rem;
+    left: 0;
+    width: 0%;
+    transition: width 0.3s ease;
+  }
+
+  &:hover {
+    text-decoration: none !important;
+    color: #5f57c3;
+
+    &:after {
+      border-bottom: 1px solid #5f57c3;
+      opacity: 0.3;
+      width: 100%;
+    }
+  }
+}

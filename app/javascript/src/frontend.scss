@@ -18,9 +18,19 @@
 #               Configs
 #
 ==================================*/
-@import '../../assets/stylesheets/frontend/common/fonts';
-@import '../../assets/stylesheets/frontend/common/variables';
-@import '../../assets/stylesheets/frontend/common/buttons';
+@import '../../assets/stylesheets/global/fonts';
+@import '../../assets/stylesheets/global/variables';
+@import '../../assets/stylesheets/global/buttons';
+@import '../../assets/stylesheets/global/alerts';
+
+
+/*==================================
+#
+#               Global
+#
+==================================*/
+@import '../../assets/stylesheets/global/helpers';
+@import '../../assets/stylesheets/global/link';
 
 /*==================================
 #
