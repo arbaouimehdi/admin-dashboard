@@ -1,40 +1,43 @@
-
 <div id="login">
 
-  <div class="row">
-
-    <!-- # Login Infos-->
-    <div class="login-infos">
+  <!-- # Login Infos-->
+  <div class="login-infos">
+    <div class="login-wrapper">
       <div class="login-container">
-
-        <!-- # -->
-        <div class="login-infos-content">
-
-          <div class="login-wrapper">
-            <div class="login-logo">
-              <a href="#">
-                <img src="<%= asset_pack_path '_/assets/images/frontend/logos/logo.png' %>" />
-              </a>
-            </div>
-            <div class="login-title">
-              <h3>
-                Join Our Great Metro Community Get Free Account
-              </h3>
-            </div>
+        <div class="login-content">
+          <div class="login-logo">
+            <a href="#">
+              <img src="<%= asset_pack_path '_/assets/images/frontend/logos/logo.png' %>"/>
+            </a>
           </div>
-
+          <div class="login-title">
+            <h3>
+              Join Our Great Metro Community Get Free Account
+            </h3>
+          </div>
+          <div class="login-description">
+            Amazing Stuff is Lorem Here.Grownng Team
+          </div>
+          <div class="login-form-action">
+            <a href="#" class="btn btn-outline-focus">Get An Account</a>
+          </div>
         </div>
-
+      </div>
+      <div class="login-border">
+        <div></div>
       </div>
     </div>
+  </div>
 
-    <!-- # Login Form -->
-    <div class="login-form">
-      <div class="login-container">
-        <h2>Yep</h2>
+  <!-- # Login Form -->
+  <div class="login-form">
+    <div class="login-container">
+      <div class="login-signin">
+        <div class="login-head">
+          <h3 class="login-title">Login To Your Account</h3>
+        </div>
       </div>
     </div>
-
   </div>
 
 </div>
@@ -51,12 +54,12 @@
 
   <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
       <div class="field">
-        <%= f.label :email %><br />
+        <%= f.label :email %><br/>
         <%= f.email_field :email, autofocus: true %>
       </div>
 
       <div class="field">
-        <%= f.label :password %><br />
+        <%= f.label :password %><br/>
         <%= f.password_field :password, autocomplete: "off" %>
       </div>
 

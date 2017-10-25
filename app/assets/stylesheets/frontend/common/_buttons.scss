@@ -1,0 +1,21 @@
+/**
+*
+*
+* Buttons
+*
+*
+*/
+
+@import 'variables';
+
+.btn-outline-focus {
+  color: $global_color;
+  background-color: transparent;
+  background-image: none;
+  border-color: $global_color;
+  &:hover {
+    color: #fff;
+    background-color: $global_color;
+    border-color: $global_color;
+  }
+}
