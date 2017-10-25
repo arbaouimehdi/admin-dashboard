@@ -181,7 +181,7 @@ crashlytics.properties
 crashlytics-build.properties
 fabric.properties
 
-/public/packs//public/packs
+/public/packs/
+
 /public/packs-test
 /node_modules
-/public/packs
