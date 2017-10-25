@@ -5,6 +5,8 @@
 *
 *
 */
+@import '../../global/variables';
+
 #login {
   background: #fff url('../../../images/frontend/bg/bg.jpg');
   height: 100%;
@@ -94,6 +96,10 @@
       margin: 3rem 0 3rem 0;
       text-align: center;
     }
+    .login-desc {
+      margin-top: 1.5rem;
+      text-align: center;
+    }
     form {
       margin-top: 4rem;
       .form__group {
@@ -130,6 +136,15 @@
       display: inline-block;
       text-align: center;
       padding: 1.2rem 3rem;
+      margin-right: 2rem;
+    }
+    .form-control-feedback {
+      margin-top: 0.2rem;
+      font-weight: 400;
+      font-size: 0.85rem;
+      &.has-danger {
+        color: $danger;
+      }
     }
   }
 
