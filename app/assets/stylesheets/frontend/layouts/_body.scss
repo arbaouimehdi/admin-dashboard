@@ -23,6 +23,18 @@ html, body {
   text-size-adjust: 100%;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  //
+  //
+  // Responsive
+  @include tablet-and-mobile() {
+    @include tablet() {
+      font-size: 13px;
+    }
+  }
+
+
+
 }
 
 img {

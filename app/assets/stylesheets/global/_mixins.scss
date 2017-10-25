@@ -1,0 +1,69 @@
+/**
+*
+*
+* Link
+*
+*
+*/
+/*
+sm: 544px,
+md: 768px,
+lg: 992px,
+xl: 1200px
+*/
+
+//== Media Query - Responsive Below
+@mixin responsive-below($width) {
+  @media (max-width: #{$width}) {
+    @content;
+  }
+}
+
+//== Media Query - Responsive Above
+@mixin responsive-above($width) {
+  @media (min-width: #{$width}) {
+    @content;
+  }
+}
+
+//== Media Query - Min Desktop Mode
+@mixin minimal-desktop {
+  @media (min-width: #{map-get($m--layout-breakpoints, lg)} + 1px) and (max-width: #{map-get($m--layout-breakpoints, xl)}) {
+    @content;
+  }
+}
+
+//== Media Query - Desktop Mode
+@mixin desktop {
+  @media (min-width: #{map-get($m--layout-breakpoints, lg)} + 1px) {
+    @content;
+  }
+}
+
+//== Media Query - Desktop & Tablet Modes
+@mixin desktop-and-tablet {
+  @media (min-width: #{map-get($m--layout-breakpoints, md)} + 1px) {
+    @content;
+  }
+}
+
+//== Media Query - Tablet Mode
+@mixin tablet {
+  @media (min-width: #{map-get($m--layout-breakpoints, md)} + 1px) and (max-width: #{map-get($m--layout-breakpoints, lg)}) {
+    @content;
+  }
+}
+
+//== Media Query - Tablet & Mobile Modes
+@mixin tablet-and-mobile {
+  @media (max-width: #{map-get($m--layout-breakpoints, lg)}) {
+    @content;
+  }
+}
+
+//== Media Query - Mobile Mode
+@mixin mobile {
+  @media (max-width: #{map-get($m--layout-breakpoints, md)}) {
+    @content;
+  }
+}
