@@ -120,13 +120,8 @@
       .form-sub {
         margin-top: 2rem;
         .col {
-          label {
+          .m-checkbox {
             font-size: 1rem;
-          }
-          input[type="checkbox"] {
-            position: absolute;
-            z-index: -1;
-            opacity: 0;
           }
         }
 
