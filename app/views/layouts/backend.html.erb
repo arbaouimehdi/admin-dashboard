@@ -10,10 +10,26 @@
 
 </head>
 
-<body>
+<body class="dashboard">
 
-  <!-- # Content -->
-  <%= yield %>
+    <!-- # If User is Logged In -->
+    <% if user_signed_in? %>
+
+        <!-- Header -->
+        <%= render 'layouts/backend/header' %>
+
+        <!-- # Content -->
+        <%= yield %>
+
+    <!-- # If User is not logged in -->
+    <% else %>
+
+        <!-- # Content -->
+        <div id="login">
+          <%= yield %>
+        </div>
+
+    <% end %>
 
 </body>
 </html>
