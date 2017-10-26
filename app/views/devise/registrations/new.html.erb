@@ -1,64 +1,60 @@
-<div id="login">
+<!-- # Infos-->
+<%= render 'devise/shared/infos' %>
 
-  <!-- # Infos-->
-  <%= render 'devise/shared/infos' %>
+<!-- # Sign Up Form -->
+<div class="login-form">
+  <div class="login-container">
+    <div class="login-signin">
 
-  <!-- # Sign Up Form -->
-  <div class="login-form">
-    <div class="login-container">
-      <div class="login-signin">
-
-        <!-- # Title-->
-        <div class="login-head">
-          <h3 class="login-title">Sign Up</h3>
-          <div class="login-desc">Enter your details to create your account:</div>
-        </div>
-
-        <!-- # Form-->
-        <%= form_for(resource, as: @user, url: registration_path(@user)) do |f| %>
-
-            <!-- # Email -->
-            <div class="form-group form__group">
-              <%= f.email_field :email, class: 'form-control', placeholder: 'Email' %>
-              <%- if !@user.errors.messages[:'email'].empty?  %>
-                <div class="form-control-feedback has-danger">
-                  <%= @user.errors.messages[:'email'][0] %>
-                </div>
-              <% end -%>
-            </div>
-
-            <!-- # Password -->
-            <div class="form-group form__group">
-              <%= f.password_field :password, class: 'form-control', placeholder: 'Password' %>
-              <%- if !@user.errors.messages[:'password'].empty?  %>
-                <div class="form-control-feedback has-danger">
-                  <%= @user.errors.messages[:'password'][0] %>
-                </div>
-              <% end -%>
-            </div>
-
-            <!-- # Password Confirmation -->
-            <div class="form-group form__group">
-              <%= f.password_field :password_confirmation, class: 'form-control', placeholder: 'Confirm Password' %>
-              <%- if !@user.errors.messages[:'password_confirmation'].empty?  %>
-                  <div class="form-control-feedback has-danger">
-                    <%= @user.errors.messages[:'password_confirmation'][0] %>
-                  </div>
-              <% end -%>
-            </div>
-
-            <!-- # Buttons -->
-            <div class="login-form-action">
-              <%= f.submit 'Sign Up', class: 'btn btn-focus m-btn btn-pill btn-air' %>
-              <%- if controller_name != 'sessions' %>
-                <%= link_to 'Cancel', new_session_path(@user), class: 'btn btn-outline-focus btn-pill' %>
-              <% end -%>
-            </div>
-
-        <% end %>
-
+      <!-- # Title-->
+      <div class="login-head">
+        <h3 class="login-title">Sign Up</h3>
+        <div class="login-desc">Enter your details to create your account:</div>
       </div>
+
+      <!-- # Form-->
+      <%= form_for(resource, as: @user, url: registration_path(@user)) do |f| %>
+
+          <!-- # Email -->
+          <div class="form-group form__group">
+            <%= f.email_field :email, class: 'form-control', placeholder: 'Email' %>
+            <%- if !@user.errors.messages[:'email'].empty?  %>
+              <div class="form-control-feedback has-danger">
+                <%= @user.errors.messages[:'email'][0] %>
+              </div>
+            <% end -%>
+          </div>
+
+          <!-- # Password -->
+          <div class="form-group form__group">
+            <%= f.password_field :password, class: 'form-control', placeholder: 'Password' %>
+            <%- if !@user.errors.messages[:'password'].empty?  %>
+              <div class="form-control-feedback has-danger">
+                <%= @user.errors.messages[:'password'][0] %>
+              </div>
+            <% end -%>
+          </div>
+
+          <!-- # Password Confirmation -->
+          <div class="form-group form__group">
+            <%= f.password_field :password_confirmation, class: 'form-control', placeholder: 'Confirm Password' %>
+            <%- if !@user.errors.messages[:'password_confirmation'].empty?  %>
+                <div class="form-control-feedback has-danger">
+                  <%= @user.errors.messages[:'password_confirmation'][0] %>
+                </div>
+            <% end -%>
+          </div>
+
+          <!-- # Buttons -->
+          <div class="login-form-action">
+            <%= f.submit 'Sign Up', class: 'btn btn-focus m-btn btn-pill btn-air' %>
+            <%- if controller_name != 'sessions' %>
+              <%= link_to 'Cancel', new_session_path(@user), class: 'btn btn-outline-focus btn-pill' %>
+            <% end -%>
+          </div>
+
+      <% end %>
+
     </div>
   </div>
-
 </div>

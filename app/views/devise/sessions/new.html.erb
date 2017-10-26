@@ -1,71 +1,69 @@
-<div id="login">
+<!-- # Login Infos-->
+<%= render 'devise/shared/infos' %>
 
-  <!-- # Login Infos-->
-  <%= render 'devise/shared/infos' %>
+<!-- # Login Form -->
+<div class="login-form">
+  <div class="login-container">
+    <div class="login-signin">
 
-  <!-- # Login Form -->
-  <div class="login-form">
-    <div class="login-container">
-      <div class="login-signin">
+      <!-- # Title-->
+      <div class="login-head">
+        <h3 class="login-title">Login To Your Account</h3>
+      </div>
 
-        <!-- # Title-->
-        <div class="login-head">
-          <h3 class="login-title">Login To Your Account</h3>
+      <!-- # Form-->
+      <%= form_for(resource, as: @user, url: session_path(@user)) do |f| %>
+
+        <!-- # Errors Messages -->
+        <%- flash.each do |name, msg| -%>
+          <div class="m-alert m-alert-outline alert alert-danger alert-dismissible" role="alert">
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+            <span><%= msg %></span>
+          </div>
+        <%- end -%>
+
+        <!-- # Inputs -->
+        <div class="form-group form__group">
+          <%= f.email_field :email, class: 'form-control', placeholder: 'Email' %>
+        </div>
+        <div class="form-group form__group">
+          <%= f.password_field :password, class: 'form-control last-input', placeholder: 'Password' %>
         </div>
 
-        <!-- # Form-->
-        <%= form_for(resource, as: @user, url: session_path(@user)) do |f| %>
+        <!-- # Actions -->
+        <div class="row form-sub">
 
-          <!-- # Errors Messages -->
-          <%- flash.each do |name, msg| -%>
-            <div class="m-alert m-alert-outline alert alert-danger alert-dismissible" role="alert">
-              <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-              <span><%= msg %></span>
+          <!-- # Remember Me-->
+          <% if devise_mapping.rememberable? -%>
+            <div class="col m--align-left">
+              <label class="m-checkbox">
+                <%= f.check_box :remember_me %>
+                Remember me
+                <span></span>
+              </label>
             </div>
-          <%- end -%>
+          <% end -%>
 
-          <!-- # Inputs -->
-          <div class="form-group form__group">
-            <%= f.email_field :email, class: 'form-control', placeholder: 'Email' %>
-          </div>
-          <div class="form-group form__group">
-            <%= f.password_field :password, class: 'form-control last-input', placeholder: 'Password' %>
-          </div>
+          <!-- # Forgot Password -->
+          <%- if devise_mapping.recoverable? && controller_name != 'passwords' && controller_name != 'registrations' %>
+            <div class="col m--align-right">
+              <%= link_to 'Forget Password ?', new_password_path(@user), class: 'link' %>
+            </div>
+          <% end-%>
 
-          <!-- # Actions -->
-          <div class="row form-sub">
+        </div>
 
-            <!-- # Remember Me-->
-            <% if devise_mapping.rememberable? -%>
-              <div class="col m--align-left">
-                <label class="m-checkbox">
-                  <%= f.check_box :remember_me %>
-                  Remember me
-                  <span></span>
-                </label>
-              </div>
-            <% end -%>
+        <!-- # Button -->
+        <div class="login-form-action">
+          <%= f.submit 'Sign In', class: 'btn btn-focus m-btn btn-pill btn-air' %>
+        </div>
 
-            <!-- # Forgot Password -->
-            <%- if devise_mapping.recoverable? && controller_name != 'passwords' && controller_name != 'registrations' %>
-              <div class="col m--align-right">
-                <%= link_to 'Forget Password ?', new_password_path(@user), class: 'link' %>
-              </div>
-            <% end-%>
+      <% end %>
 
-          </div>
-
-          <!-- # Button -->
-          <div class="login-form-action">
-            <%= f.submit 'Sign In', class: 'btn btn-focus m-btn btn-pill btn-air' %>
-          </div>
-
-        <% end %>
-
-      </div>
     </div>
   </div>
-
 </div>
+
+
