@@ -1,8 +1,8 @@
 {
-  "_/assets/images/frontend/bg/bg.jpg": "/packs/_/assets/images/frontend/bg/bg-6ecf79dbb9a59248510d64773993254e.jpg",
-  "_/assets/images/frontend/logos/logo.png": "/packs/_/assets/images/frontend/logos/logo-2a5aacb08ca2b53000cce3132109490c.png",
-  "backend.css": "/packs/backend-d41d8cd98f00b204e9800998ecf8427e.css",
-  "backend.js": "/packs/backend-ad109da9a025e5ceb8d0.js",
-  "frontend.css": "/packs/frontend-1da2a0133885d5008ba6023085482207.css",
-  "frontend.js": "/packs/frontend-954e755446d38787817a.js"
+  "_/assets/images/backend/bg/bg.jpg": "/packs/_/assets/images/backend/bg/bg-6ecf79dbb9a59248510d64773993254e.jpg",
+  "_/assets/images/backend/logos/logo.png": "/packs/_/assets/images/backend/logos/logo-2a5aacb08ca2b53000cce3132109490c.png",
+  "backend.css": "/packs/backend-0164f52aee7cb2f8c2dcdadf75cf0801.css",
+  "backend.js": "/packs/backend-5b54d0bfae5bb04b528f.js",
+  "frontend.css": "/packs/frontend-0daa006edeed43a4f45ac43a0ae62506.css",
+  "frontend.js": "/packs/frontend-ab894ee0976a4ff30bf3.js"
 }
