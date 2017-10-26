@@ -11,6 +11,9 @@ body {
   line-height: 1.5;
   color: #212529;
   background-color: #fff;
+  &.dashboard {
+    background: $light2;
+  }
 }
 html, body {
   height: 100%;
