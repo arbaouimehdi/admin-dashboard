@@ -30,19 +30,116 @@
     height: auto;
   }
 
+  .m-stack-general {
+    display: table;
+    table-layout: fixed;
+    > .m-stack-item {
+      display: table-cell;
+      vertical-align: top;
+      height: 100%;
+    }
+    > .m-stack-item-middle {
+      vertical-align: middle;
+    }
+  }
+
 }
 
 .m-brand {
-  background: #282a3c;
+  background: $dark_blue;
   transition: all 0.3s ease;
   height: 70px;
   width: 300px;
   padding: 0 30px;
+  .m-brand-logo {
+    display: inline-block;
+  }
+  .m-brand-tools {
+    line-height: 0;
+    vertical-align: middle;
+    text-align: right;
+
+    .m-brand-icon {
+      display: inline-block;
+      line-height: 0;
+      vertical-align: middle;
+      cursor: pointer;
+        &:hover {
+          text-decoration: none;
+        }
+      }
+
+    .m-brand-toggler {
+      display: inline-block;
+      position: relative;
+      overflow: hidden;
+      margin: 0;
+      padding: 0;
+      width: 26px;
+      height: 26px;
+      font-size: 0;
+      text-indent: -9999px;
+      appearance: none;
+      box-shadow: none;
+      border-radius: 0;
+      border: none;
+      cursor: pointer;
+      background: none;
+      outline: none !important;
+      transition: all 0.4s ease;
+
+      &:hover {
+        span, span:after, span:before {
+          background: $light_blue_2;
+          width: 100%;
+        }
+      }
+
+      span {
+        display: block;
+        position: absolute;
+        top: 13px;
+        height: 1px;
+        min-height: 1px;
+        width: 100%;
+        border-radius: 0;
+        transition: all 0.4s ease;
+        background: $blue_light;
+
+        &:before {
+          left: auto;
+          right: 0;
+          top: -7px;
+          width: 50%;
+          transition: all 0.4s ease;
+        }
+        &:after {
+          left: auto;
+          right: 0;
+          bottom: -7px;
+          width: 75%;
+          transition: all 0.4s ease;
+        }
+
+        &:before, &:after {
+          background: $blue_light;
+          position: absolute;
+          display: block;
+          height: 1px;
+          min-height: 1px;
+          content: "";
+          border-radius: 0;
+          transition: all 0.4s ease;
+        }
+      }
+
+    }
+  }
 }
 
 
 /**
-*
+*.m-brand .m-brand-logo, .m-brand .m-brand-tools
 *
 * Responsive
 *
@@ -59,6 +156,9 @@
     height: 70px;
     background: #fff;
     backface-visibility: hidden;
+    .m-header-head {
+      box-shadow: 0 1px 15px 1px rgba(113, 106, 202, 0.1);
+    }
   }
 
   .m-stack {
@@ -73,7 +173,6 @@
       }
     }
   }
-
 }
 
 
@@ -87,5 +186,12 @@
     height: 60px;
     background: #fff;
     backface-visibility: hidden;
+  }
+  .m-brand {
+    width: 100%;
+    position: relative;
+    height: 60px !important;
+    padding: 0 25px;
+    z-index: 2;
   }
 }
