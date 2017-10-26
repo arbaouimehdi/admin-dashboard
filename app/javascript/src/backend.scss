@@ -1,0 +1,51 @@
+/**
+*
+*
+* Backend Styles
+*
+*
+*/
+
+/*==================================
+#
+#          External Libraries
+#
+==================================*/
+@import '../../../node_modules/bootstrap/dist/css/bootstrap';
+
+/*==================================
+#
+#               Configs
+#
+==================================*/
+@import '../../assets/stylesheets/global/config';
+@import '../../assets/stylesheets/global/mixins';
+@import '../../assets/stylesheets/global/fonts';
+@import '../../assets/stylesheets/global/buttons';
+@import '../../assets/stylesheets/global/alerts';
+@import '../../assets/stylesheets/global/inputs';
+
+/*==================================
+#
+#               Global
+#
+==================================*/
+@import '../../assets/stylesheets/global/helpers';
+@import '../../assets/stylesheets/global/link';
+
+/*==================================
+#
+#               Layouts
+#
+==================================*/
+@import '../../assets/stylesheets/backend/layouts/body';
+@import '../../assets/stylesheets/backend/layouts/header';
+@import '../../assets/stylesheets/backend/layouts/sidebar';
+
+/*==================================
+#
+#               Pages
+#
+==================================*/
+@import '../../assets/stylesheets/backend/uis/login';
+

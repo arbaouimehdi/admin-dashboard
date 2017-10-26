@@ -5,9 +5,13 @@
 *
 *
 */
+
+//
+// Layouts
 // Define the minimum and maximum dimensions at which your layout will change,
 // adapting to different screen sizes, for use in media queries.
 $layout-size: (
+
   // Small screen / phone
   sm: 576px,
 
@@ -25,3 +29,13 @@ $layout-size: (
 
   xxxl: 1600px
 ) !default;
+
+//
+//
+// Colors
+$focus: #9816f4;
+$brand: #716aca;
+$danger: #f4516c;
+$light_gray: #bdc3d4;
+$light_blue: #7281a4;
+$light2: #f2f3f8;

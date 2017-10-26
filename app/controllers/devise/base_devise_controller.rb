@@ -1,4 +1,4 @@
 
 class Devise::BaseDeviseController < ActionController::Base
-  layout 'frontend'
+  layout 'backend'
 end

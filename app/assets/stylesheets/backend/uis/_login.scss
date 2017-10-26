@@ -1,0 +1,231 @@
+/**
+*
+*
+* Login
+*
+*
+*/
+#login {
+  background: #fff url('../../../images/backend/bg/bg.jpg');
+  height: 100%;
+  display: table;
+  width: 100%;
+  overflow: hidden;
+
+  //
+  //
+  // Infos
+  .login-infos {
+    display: table-cell;
+    width: 50%;
+    .login-container {
+      margin: 0 auto;
+      display: table-cell;
+      padding-top: 50px;
+      text-align: center;
+    }
+    .login-title {
+      padding-top: 6rem;
+    }
+    .login-description {
+      padding-top: 2.2rem;
+    }
+    .login-border {
+      display: table-cell;
+      padding-top: 7rem;
+      > div {
+        height: 500px;
+        background: #ffffff;
+        width: 30px;
+        box-shadow: -19px 0 35px -7px #F5F5F5;
+        margin-top: -100px;
+        position: absolute;
+      }
+    }
+    .login-form-action {
+      margin: 3.4rem 0 3rem 0;
+      text-align: center;
+      .btn {
+        display: inline-block;
+        text-align: center;
+        padding: 1.2rem 3rem;
+        margin-right: 2rem;
+        border-radius: 60px;
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+    .login-wrapper {
+      display: table;
+      margin: 0 auto;
+      width: 100%;
+    }
+    .login-content {
+      width: 500px;
+      margin: 0 auto;
+      padding: 1rem 1.5rem;
+    }
+  }
+
+  //
+  //
+  // Form
+  .login-form {
+    padding-top: 13%;
+    display: table-cell;
+    width: 50%;
+    .login-signin {
+      display: block;
+    }
+    .login-title {
+      text-align: center;
+      font-size: 1.5rem;
+    }
+    .login-head {
+      margin-top: 1rem;
+    }
+    .login-container {
+      width: 430px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+    .login-form-action {
+      margin: 3rem 0 3rem 0;
+      text-align: center;
+    }
+    .login-desc {
+      margin-top: 1.5rem;
+      text-align: center;
+    }
+    form {
+      margin-top: 4rem;
+      .form__group {
+        margin: 0;
+        padding: 0;
+        position: relative;
+        .form-control {
+          border-radius: 0;
+          border: 0;
+          border-bottom: 1px solid #ebedf2;
+          padding: 1rem 0;
+          margin-top: 0.1rem;
+          &.last-input {
+            border-bottom: 0;
+          }
+        }
+      }
+      .form-sub {
+        margin-top: 2rem;
+        .col {
+          .m-checkbox {
+            font-size: 1rem;
+          }
+        }
+
+      }
+    }
+    .btn {
+      display: inline-block;
+      text-align: center;
+      padding: 1.2rem 3rem;
+      margin-right: 2rem;
+    }
+    .form-control-feedback {
+      margin-top: 0.2rem;
+      font-weight: 400;
+      font-size: 0.85rem;
+      &.has-danger {
+        color: $danger;
+      }
+    }
+  }
+
+}
+
+/**
+*
+*
+* Responsive
+*
+*
+*/
+@include mobile {
+
+  #login {
+
+    //
+    //
+    // Login Infos
+    .login-infos {
+      width: 100%;
+      display: block;
+      margin: 0 auto;
+      .login-container {
+        display: block;
+        width: 100%;
+      }
+      .login-wrapper {
+        padding-bottom: 0;
+        margin: 0 auto;
+      }
+      .login-border {
+        display: block;
+        margin-top: 150px;
+        padding-top: 0;
+        > div {
+          height: 30px;
+          background: #ffffff;
+          width: 100%;
+          box-shadow: 0 -15px 30px -7px #F5F5F5;
+          position: relative;
+        }
+      }
+      .login-content {
+        width: 100%;
+      }
+    }
+
+    //
+    //
+    // Login Form
+    .login-form {
+      width: 100%;
+      display: block;
+      .login-container {
+        width: 100%;
+        margin: 0 auto;
+      }
+    }
+
+  }
+}
+@include tablet-and-mobile() {
+  @include tablet() {
+
+    #login {
+
+      //
+      //
+      // Login Infos
+      .login-infos {
+        .login-content {
+          width: 100%;
+          padding: 2rem 3rem;
+        }
+      }
+
+      //
+      //
+      // Login Form
+      .login-form {
+        .login-container {
+          width: 100%;
+          padding: 0 3rem;
+        }
+      }
+
+    }
+
+  }
+}
