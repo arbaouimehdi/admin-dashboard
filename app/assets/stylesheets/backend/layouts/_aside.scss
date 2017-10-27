@@ -1,0 +1,250 @@
+/**
+*
+*
+* Aside
+*
+*
+*/
+.m-aside-left {
+  width: 300px;
+  background-color: $dark_aside;
+  transition: all 0.3s ease;
+}
+
+/**
+*
+*
+* Menu
+*
+*
+.m-aside-menu .m-menu__nav > .m-menu__section {
+    margin: 20px 0 0 0;
+    height: 40px;
+}
+
+*/
+.m-aside-menu {
+
+  .m-menu-nav {
+    list-style: none;
+
+    > .m-menu-item {
+      position: relative;
+      margin: 0;
+
+      > .m-menu-link {
+        padding: 9px 30px;
+        height: 44px;
+        display: table;
+        table-layout: fixed;
+        width: 100%;
+        margin: 0;
+        text-decoration: none;
+        position: relative;
+        outline: none;
+        &:hover {
+          text-decoration: none;
+          cursor: pointer;
+          .m-menu-link-icon {
+            color: $icon_hover_aside;
+          }
+        }
+        .m-menu-link-text {
+          color: $link_aside;
+        }
+        .m-menu-link-icon {
+          text-align: left;
+          display: table-cell;
+          width: 35px;
+          font-size: 1.4rem;
+          color: $icon_aside;
+          height: 100%;
+          vertical-align: middle;
+          line-height: 0;
+        }
+        .m-menu-link-title {
+          display: table;
+          height: 100%;
+          width: 100%;
+          padding: 0;
+          vertical-align: middle;
+        }
+      }
+
+      &:hover {
+        background-color: $list_hover_aside;
+      }
+
+    }
+
+    .m-menu-item {
+      display: block;
+      float: none;
+      height: auto;
+      padding: 0;
+    }
+
+    > .m-menu-section {
+      margin: 20px 0 0 0;
+      height: 40px;
+      > .m-menu-section-text {
+        color: $section_title_aside;
+        font-size: 0.83rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.3px;
+      }
+      .m-menu-section-icon {
+        color: $icon_section_aside;
+        font-size: 1.1rem;
+        display: none;
+        text-align: center;
+        vertical-align: middle;
+      }
+    }
+
+    .m-menu-section {
+      display: table;
+      width: 100%;
+      vertical-align: middle;
+      padding: 0 27px;
+      .m-menu-section-text {
+        display: table-cell;
+        margin: 0;
+        padding: 0;
+        vertical-align: middle;
+      }
+    }
+  }
+
+}
+
+/**
+*
+*
+* Responsive
+*
+*
+*/
+
+// 993px
+@include responsive-above(993px) {
+
+  .m-aside-menu {
+    .m-menu-nav {
+      padding: 30px 0 30px 0;
+    }
+  }
+
+  .m-header-fixed .m-body {
+    padding-top: 70px !important;
+  }
+
+  .m-aside-left-minimize {
+    .m-aside-menu {
+      .m-menu-nav {
+
+        > .m-menu-section {
+          padding-left: 0;
+          padding-right: 0;
+          text-align: center;
+          .m-menu-section-text {
+            display: none;
+          }
+          .m-menu-section-icon {
+            display: table-cell;
+            vertical-align: top;
+          }
+        }
+
+        > .m-menu-item {
+          > .m-menu-link {
+            padding-left: 0;
+            padding-right: 0;
+            text-align: center;
+            > .m-menu-link-title {
+              padding: 0;
+              position: relative;
+              left: -50%;
+            }
+            .m-menu-link-text {
+              display: none;
+            }
+            .m-menu-link-icon {
+              width: 100%;
+              text-align: center;
+            }
+          }
+        }
+      }
+    }
+  }
+
+}
+
+// 992
+@include desktop {
+
+  .m-aside-left-minimize {
+    .m-aside-left {
+      width: 70px;
+      transition: all 0.3s ease;
+    }
+  }
+
+  .m-aside-left-fixed {
+
+    .m-aside-left {
+      top: 0;
+      bottom:0;
+      position:fixed;
+      height: auto !important;
+      left: 0;
+    }
+
+    &.m-page-wide {
+      .m-aside-left {
+        left: auto;
+      }
+    }
+
+    // fixed header
+    &.m-header-static,
+    &.m-header-fixed {
+      .m-aside-left {
+
+      }
+    }
+
+    // body on fixed aside mode
+    .m-body {
+
+    }
+
+    // wide layout mode
+    &.m-page-wide.m-aside-left-fixed {
+      .m-body {
+        padding-left: 0;
+      }
+    }
+
+    &.m-aside-left-minimize {
+      .m-body {
+
+      }
+    }
+
+    // boxed layout
+    &.m-page-boxed {
+      .m-aside-left {
+        left: auto;
+      }
+
+      &.m-aside-left-minimize {
+        .m-aside-left {
+
+        }
+      }
+    }
+  }
+}

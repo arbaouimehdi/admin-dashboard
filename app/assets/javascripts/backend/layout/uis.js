@@ -11,15 +11,25 @@ export default {
    * Toggle Sidebar
    *
    * @param selector
+   * @param target
+   * @param targetState
+   * @param togglerState
    */
   asideToggle({selector, target, targetState, togglerState}){
 
     $(selector).on('click', function(){
 
-      $(`${target}`).addClass('m-brand-minimize');
-      $(this).addClass(togglerState);
+      $(this).toggleClass(togglerState);
 
-      return false;
+      console.log($(this).attr('class'))
+
+      if ($(this).hasClass(togglerState)) {
+        $(`${target}`).addClass(targetState);
+      }
+      else {
+        $(`${target}`).removeClass(targetState);
+      }
+
     })
 
   }

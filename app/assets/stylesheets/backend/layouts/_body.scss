@@ -5,31 +5,13 @@
 *
 *
 */
-body {
-  display: flex;
-  flex-direction: column;
-  line-height: 1.5;
-  color: #212529;
-  background-color: #fff;
-  &.dashboard {
-    background: $light2;
+.m-body {
+  .m-content {
+    padding: 30px 30px;
   }
-}
-html, body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  font-size: 14px;
-  font-weight: 300;
-  font-family: "Poppins", sans-serif;
-  text-size-adjust: 100%;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-
-}
-img {
-  vertical-align: middle;
-  border-style: none;
+  .m-wrapper {
+    overflow: hidden;
+  }
 }
 
 /**
@@ -40,9 +22,11 @@ img {
 *
 */
 @include tablet-and-mobile() {
-  @include tablet() {
-    html, body {
-      font-size: 13px;
+
+  .m-body {
+    .m-content {
+      padding: 20px;
     }
   }
+
 }

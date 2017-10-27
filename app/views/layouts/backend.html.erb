@@ -10,26 +10,62 @@
 
 </head>
 
-<body class="dashboard">
+<body class="m-page-fluid m-header-fixed m-header-fixed-mobile m-aside-left-enabled m-footer-push dashboard">
 
-    <!-- # If User is Logged In -->
-    <% if user_signed_in? %>
+  <!-- # If User is Logged In -->
+  <% if user_signed_in? %>
 
-        <!-- Header -->
-        <%= render 'layouts/backend/header' %>
+    <%
+    ################################
+    #                              #
+    #        Dashboard Views       #
+    #                              #
+    ################################
+    %>
+    <div class="m-grid m-grid-hor m-grid-root m-page">
+
+      <%
+      ################################
+      #            Header            #
+      ################################
+      %>
+      <%= render 'layouts/backend/header' %>
+
+      <%
+      ################################
+      #             Body             #
+      ################################
+      %>
+      <div class="m-grid-item m-grid-item-fluid m-grid m-grid-ver-desktop m-grid-desktop m-body">
+
+        <%
+        ################################
+        #             Aside            #
+        ################################
+        %>
+        <%= render 'layouts/backend/aside' %>
 
         <!-- # Content -->
         <%= yield %>
 
-    <!-- # If User is not logged in -->
-    <% else %>
+      </div>
 
-        <!-- # Content -->
-        <div id="login">
-          <%= yield %>
-        </div>
+    </div>
 
-    <% end %>
+  <%
+  ################################
+  #                              #
+  #          Login Views         #
+  #                              #
+  ################################
+  %>
+  <% else %>
+
+    <div id="login">
+      <%= yield %>
+    </div>
+
+  <% end %>
 
 </body>
 </html>
