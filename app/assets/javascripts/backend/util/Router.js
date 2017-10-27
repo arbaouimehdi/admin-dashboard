@@ -48,7 +48,7 @@ class Router {
    */
   loadEvents() {
     // Fire common init JS
-    this.fire('home');
+    this.fire('dashboard');
   }
 }
 
