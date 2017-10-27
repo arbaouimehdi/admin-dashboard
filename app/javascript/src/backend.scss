@@ -12,6 +12,7 @@
 #
 ==================================*/
 @import '../../../node_modules/bootstrap/dist/css/bootstrap';
+@import '../../assets/stylesheets/backend/vendors/flaticon';
 
 /*==================================
 #
@@ -35,12 +36,20 @@
 
 /*==================================
 #
+#               Base
+#
+==================================*/
+@import '../../assets/stylesheets/backend/base/reset';
+@import '../../assets/stylesheets/backend/base/grid';
+
+/*==================================
+#
 #               Layouts
 #
 ==================================*/
-@import '../../assets/stylesheets/backend/layouts/body';
 @import '../../assets/stylesheets/backend/layouts/header';
-@import '../../assets/stylesheets/backend/layouts/sidebar';
+@import '../../assets/stylesheets/backend/layouts/aside';
+@import '../../assets/stylesheets/backend/layouts/body';
 
 /*==================================
 #
