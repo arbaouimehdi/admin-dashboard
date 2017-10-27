@@ -53,6 +53,9 @@
   padding: 0 30px;
   .m-brand-logo {
     display: inline-block;
+    .m-brand-logo-wrapper {
+      display: inline-block;
+    }
   }
   .m-brand-tools {
     line-height: 0;
@@ -87,6 +90,26 @@
       background: none;
       outline: none !important;
       transition: all 0.4s ease;
+
+      &.m-brand-toggler-active {
+        span, span:before, span:after {
+          background: $light_blue_2;
+        }
+        span {
+          &:before {
+            transition: all 0.4s ease;
+            left: 0;
+            right: auto;
+            width: 50%;
+          }
+          &:after {
+            transition: all 0.4s ease;
+            left: 0;
+            right: auto;
+            width: 75%;
+          }
+        }
+      }
 
       &:hover {
         span, span:after, span:before {

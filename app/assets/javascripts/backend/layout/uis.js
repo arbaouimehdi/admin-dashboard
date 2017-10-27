@@ -17,6 +17,7 @@ export default {
     $(selector).on('click', function(){
 
       $(`${target}`).addClass('m-brand-minimize');
+      $(this).addClass(togglerState);
 
       return false;
     })
