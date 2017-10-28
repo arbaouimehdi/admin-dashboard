@@ -8,14 +8,6 @@
 
 /*==================================
 #
-#          External Libraries
-#
-==================================*/
-@import '../../../node_modules/bootstrap/dist/css/bootstrap';
-@import '../../assets/stylesheets/backend/vendors/flaticon';
-
-/*==================================
-#
 #               Configs
 #
 ==================================*/
@@ -25,6 +17,15 @@
 @import '../../assets/stylesheets/global/buttons';
 @import '../../assets/stylesheets/global/alerts';
 @import '../../assets/stylesheets/global/inputs';
+
+/*==================================
+#
+#          External Libraries
+#
+==================================*/
+@import '../../../node_modules/bootstrap/scss/bootstrap';
+@import '../../assets/stylesheets/backend/vendors/flaticon';
+@import '../../assets/stylesheets/backend/vendors/line-awesome';
 
 /*==================================
 #

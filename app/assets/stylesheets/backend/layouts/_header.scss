@@ -93,7 +93,7 @@
 
       &.m-brand-toggler-active {
         span, span:before, span:after {
-          background: $light_blue_2;
+          background: $link_color;
         }
         span {
           &:before {
@@ -113,7 +113,7 @@
 
       &:hover {
         span, span:after, span:before {
-          background: $light_blue_2;
+          background: $link_color;
           width: 100%;
         }
       }

@@ -16,25 +16,38 @@
 *
 * Menu
 *
-*
-.m-aside-menu .m-menu__nav > .m-menu__section {
-    margin: 20px 0 0 0;
-    height: 40px;
+.m-aside-menu .m-menu__nav > .m-menu__item .m-menu__submenu .m-menu__item > .m-menu__link .m-menu__link-text {
+    color: #686c89;
 }
-
+*
 */
 .m-aside-menu {
 
   .m-menu-nav {
     list-style: none;
 
-    > .m-menu-item {
-      position: relative;
-      margin: 0;
+    .m-menu-item {
+      display: block;
+      float: none;
+      height: auto;
+      padding: 0;
+
+      &.m-menu-item-open {
+
+        > .m-menu-link {
+          > .m-menu-ver-arrow {
+            &:before {
+              transform: rotateZ(90deg);
+            }
+          }
+        }
+
+        > .m-menu-submenu {
+          display: block;
+        }
+      }
 
       > .m-menu-link {
-        padding: 9px 30px;
-        height: 44px;
         display: table;
         table-layout: fixed;
         width: 100%;
@@ -42,64 +55,41 @@
         text-decoration: none;
         position: relative;
         outline: none;
-        &:hover {
-          text-decoration: none;
-          cursor: pointer;
-          .m-menu-link-icon {
-            color: $icon_hover_aside;
-          }
-        }
-        .m-menu-link-text {
-          color: $link_aside;
-        }
+        padding: 0;
+
         .m-menu-link-icon {
-          text-align: left;
           display: table-cell;
-          width: 35px;
-          font-size: 1.4rem;
-          color: $icon_aside;
           height: 100%;
           vertical-align: middle;
           line-height: 0;
         }
-        .m-menu-link-title {
-          display: table;
+
+        .m-menu-link-bullet {
+          display: table-cell;
+          height: 100%;
+          vertical-align: middle;
+          line-height: 0;
+        }
+
+        .m-menu-link-text {
+          display: table-cell;
           height: 100%;
           width: 100%;
           padding: 0;
           vertical-align: middle;
         }
-      }
 
-      &:hover {
-        background-color: $list_hover_aside;
-      }
+        .m-menu-ver-arrow {
+          display: table-cell;
+          vertical-align: middle;
+          line-height: 0;
+          height: 100%;
+          &:before {
+            display: inline-block;
+            transition: all 0.3s ease;
+          }
+        }
 
-    }
-
-    .m-menu-item {
-      display: block;
-      float: none;
-      height: auto;
-      padding: 0;
-    }
-
-    > .m-menu-section {
-      margin: 20px 0 0 0;
-      height: 40px;
-      > .m-menu-section-text {
-        color: $section_title_aside;
-        font-size: 0.83rem;
-        font-weight: 600;
-        text-transform: uppercase;
-        letter-spacing: 0.3px;
-      }
-      .m-menu-section-icon {
-        color: $icon_section_aside;
-        font-size: 1.1rem;
-        display: none;
-        text-align: center;
-        vertical-align: middle;
       }
     }
 
@@ -115,6 +105,170 @@
         vertical-align: middle;
       }
     }
+
+    .m-menu-submenu {
+      display: none;
+      float: none;
+      margin: 0;
+      padding: 0;
+      .m-menu-item {
+        margin: 0;
+      }
+    }
+
+    .m-menu-subnav {
+      padding: 0;
+      width: 100%;
+      margin: 0;
+      list-style: none;
+    }
+
+    > .m-menu-item {
+      position: relative;
+      margin: 0;
+
+      &:hover {
+        background-color: $list_hover_aside;
+      }
+
+      &.m-menu-item-expanded, &.m-menu-item-open {
+        background-color: $list_hover_aside;
+        > .m-menu-link {
+          .m-menu-ver-arrow {
+            color: $icon_hover_aside;
+          }
+        }
+      }
+
+      &.m-menu-item-open {
+        > .m-menu-link {
+          .m-menu-ver-arrow {
+            &:before {
+              transition: all 0.3s ease;
+            }
+          }
+        }
+      }
+
+      .m-menu-submenu {
+        .m-menu-item {
+
+          &:hover {
+            .m-menu-link {
+              .m-menu-link-text {
+                color: $link_aside;
+              }
+            }
+          }
+
+          &.m-menu-item-active {
+            > .m-menu-link {
+              .m-menu-link-text {
+                color: $link-color;
+              }
+            }
+          }
+
+          > .m-menu-link {
+            height: 40px;
+
+            .m-menu-link-bullet {
+              vertical-align: middle;
+              text-align: left;
+              width: 20px;
+              > span {
+                vertical-align: middle;
+                display: inline-block;
+              }
+              &.m-menu-link-bullet-dot {
+                > span {
+                  background-color: $link_color;
+                  width: 4px;
+                  height: 4px;
+                  border-radius: 100%;
+                }
+              }
+            }
+
+            .m-menu-link-text {
+              color: $submenu_link;
+            }
+
+          }
+        }
+      }
+
+      > .m-menu-link {
+        padding: 9px 30px;
+        height: 44px;
+
+        &:hover {
+          text-decoration: none;
+          cursor: pointer;
+          .m-menu-link-icon {
+            color: $icon_hover_aside;
+          }
+        }
+
+        .m-menu-link-text {
+          color: $link_aside;
+        }
+
+        .m-menu-link-icon {
+          text-align: left;
+          width: 35px;
+          font-size: 1.4rem;
+          color: $icon_hover_aside;
+        }
+
+        .m-menu-link-title {
+          display: table;
+          height: 100%;
+          width: 100%;
+          padding: 0;
+          vertical-align: middle;
+        }
+
+        .m-menu-ver-arrow {
+          text-align: right;
+          width: 20px;
+          font-size: 0.7rem;
+        }
+
+      }
+
+      > .m-menu-submenu {
+        > .m-menu-subnav {
+          > .m-menu-item {
+            > .m-menu-link {
+              padding: 0 30px;
+              padding-left: 50px;
+            }
+          }
+        }
+      }
+
+    }
+
+    > .m-menu-section {
+      margin: 20px 0 0 0;
+      height: 40px;
+      > .m-menu-section-text {
+        color: $section_title_aside;
+        font-size: 0.83rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.3px;
+      }
+      .m-menu-section-icon {
+        color: $section_title_aside;
+        font-size: 1.1rem;
+        display: none;
+        text-align: center;
+        vertical-align: middle;
+      }
+    }
+
   }
 
 }
@@ -247,4 +401,5 @@
       }
     }
   }
+
 }

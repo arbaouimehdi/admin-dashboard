@@ -33,9 +33,13 @@ $layout-size: (
 //
 //
 // Colors
+
+// Bootstrap
+$link-color: #716aca;
+$link-hover-color: #2739c1;
+
+//
 $focus: #9816f4;
-$brand: #716aca;
-$light_blue_2: #716aca;
 $danger: #f4516c;
 $light_gray: #bdc3d4;
 $light_blue: #7281a4;
@@ -44,13 +48,10 @@ $blue_light: #5d5f77;
 $dark_blue: #282a3c;
 
 //
-//
-//
 $dark_aside: #2c2e3e;
 $link_aside: #868aa8;
 $icon_hover_aside: #8c8ea4;
 $list_hover_aside: #292b3a;
 $icon_aside: #525672;
 $section_title_aside: #464b66;
-$icon_section_aside: #464b66;
-
+$submenu_link: #686c89;
