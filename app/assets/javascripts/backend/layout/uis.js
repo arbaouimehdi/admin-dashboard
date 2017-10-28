@@ -21,8 +21,6 @@ export default {
 
       $(this).toggleClass(togglerState);
 
-      console.log($(this).attr('class'))
-
       if ($(this).hasClass(togglerState)) {
         $(`${target}`).addClass(targetState);
       }
@@ -33,5 +31,4 @@ export default {
     })
 
   }
-
 }
