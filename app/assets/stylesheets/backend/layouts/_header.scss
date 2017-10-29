@@ -177,7 +177,7 @@
 *
 */
 
-// 993px
+// @media (min-width: 993px)
 @include responsive-above(993px) {
 
   .m-header {
@@ -231,6 +231,7 @@
   }
 }
 
+// @media (max-width: 992px)
 @include tablet-and-mobile() {
   .m-header {
     position: fixed;
@@ -265,6 +266,7 @@
 
 }
 
+// @media (max-width: 1200px) and (min-width: 993px)
 @include minimal-desktop(){
   .m-top-bar {
     padding: 0;

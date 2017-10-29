@@ -17,6 +17,7 @@ export default {
       togglerState: 'm-brand-toggler-active',
     });
     ui.asideMenu({
+      targetMenu: '.m-aside-menu',
       selector: '.m-menu-link',
       targetState: 'm-menu-item-open'
     });
