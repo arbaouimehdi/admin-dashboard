@@ -19,8 +19,11 @@ export default {
 
     $(selector).on('click', function(){
 
+      //
       $(this).toggleClass(togglerState);
+      $('.m-aside-left').toggleClass('m-aside-left-on');
 
+      //
       if ($(this).hasClass(togglerState)) {
         $(`${target}`).addClass(targetState);
       }
