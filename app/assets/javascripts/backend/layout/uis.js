@@ -35,40 +35,52 @@ export default {
   /**
    * Aside Menu
    *
+   * @param targetMenu
    * @param selector
    * @param targetState
    */
-  asideMenu({selector, targetState}){
+  asideMenu({targetMenu, selector, targetState}){
 
     let sub_menu,
-        expanded_list,
-        list;
+        not_expanded_list,
+        list,
+        submenu_level_1;
 
-    $(selector).on('click', function(){
+    $(`${targetMenu} ${selector}`).on('click', function(){
 
-      sub_menu = $(this).next();
-      list = $(this).parent();
-      expanded_list = $('.m-menu-item.m-menu-item-submenu').not('.m-menu-item-expanded');
+      sub_menu          = $(this).next();
+      list              = $(this).parent();
+      submenu_level_1   = $(this).parent().parent().hasClass('m-menu-nav');
+      not_expanded_list = $(`${targetMenu} .m-menu-nav > .m-menu-item-submenu`).not('.m-menu-item-expanded');
 
       //
       //
-      // Open the Menu
+      //
+      //
+      // Open the Sub Menu
       if (!list.hasClass(targetState)){
 
-        // Close all Sub Menus except the Current and the Expanded Ones
-        expanded_list.find('.m-menu-submenu').slideUp(function(){
-          expanded_list.not(sub_menu).removeClass(targetState);
-        });
+        //
+        // Sub Menu Level 1
+        if (submenu_level_1){
+
+          // Close all Sub Menus except the Current and the Expanded Ones
+          not_expanded_list.not(sub_menu)
+            .removeClass(targetState)
+            .find('> .m-menu-submenu')
+            .slideUp();
+
+        }
 
         // Open the current Sub Menu
         sub_menu.slideDown(function(){
           $(this).parent().addClass(targetState);
         });
 
-        console.log('open');
-
       }
 
+      //
+      //
       //
       //
       // Close the Sub Menu
