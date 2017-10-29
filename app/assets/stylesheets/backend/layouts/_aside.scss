@@ -158,18 +158,36 @@
         .m-menu-item {
 
           &:hover {
+
             .m-menu-link {
               .m-menu-link-text {
                 color: $link_aside;
               }
             }
+
+            > .m-menu-link {
+              .m-menu-ver-arrow {
+                color: $icon_hover_aside;
+              }
+            }
+
           }
 
           &.m-menu-item-active {
             > .m-menu-link {
+
               .m-menu-link-text {
                 color: $link-color;
               }
+
+              .m-menu-link-bullet {
+                &.m-menu-link-bullet-dot {
+                  > span {
+                    background-color: $link-color;
+                  }
+                }
+              }
+
             }
           }
 
@@ -186,7 +204,7 @@
               }
               &.m-menu-link-bullet-dot {
                 > span {
-                  background-color: $link_color;
+                  background-color: $icon_aside;
                   width: 4px;
                   height: 4px;
                   border-radius: 100%;
@@ -196,6 +214,13 @@
 
             .m-menu-link-text {
               color: $submenu_link;
+            }
+
+            .m-menu-ver-arrow {
+              text-align: right;
+              width: 20px;
+              font-size: 0.7rem;
+              color: $icon_aside;
             }
 
           }
@@ -244,10 +269,23 @@
       > .m-menu-submenu {
         > .m-menu-subnav {
           > .m-menu-item {
+
             > .m-menu-link {
               padding: 0 30px;
               padding-left: 50px;
             }
+
+            > .m-menu-submenu {
+              > .m-menu-subnav {
+                > .m-menu-item {
+                  > .m-menu-link {
+                    padding: 0 30px;
+                    padding-left: 75px;
+                  }
+                }
+              }
+            }
+
           }
         }
       }
