@@ -16,9 +16,6 @@
 *
 * Menu
 *
-.m-aside-menu .m-menu__nav > .m-menu__item .m-menu__submenu .m-menu__item > .m-menu__link .m-menu__link-text {
-    color: #686c89;
-}
 *
 */
 .m-aside-menu {
@@ -129,6 +126,13 @@
 
       &:hover {
         background-color: $list_hover_aside;
+
+        > .m-menu-link {
+          .m-menu-ver-arrow {
+            color: $icon_hover_aside;
+          }
+        }
+
       }
 
       &.m-menu-item-expanded, &.m-menu-item-open {
@@ -279,6 +283,9 @@
 * Responsive
 *
 *
+.m-aside-left--minimize .m-aside-menu .m-menu__nav > .m-menu__item > .m-menu__submenu {
+    display: none !important;
+}
 */
 
 // 993px
@@ -312,23 +319,37 @@
         }
 
         > .m-menu-item {
+
           > .m-menu-link {
             padding-left: 0;
             padding-right: 0;
             text-align: center;
+
+            .m-menu-link-text {
+              display: none;
+            }
+
+            .m-menu-link-icon {
+              width: 100%;
+              text-align: center;
+            }
+
+            .m-menu-ver-arrow {
+              display: none;
+            }
+
             > .m-menu-link-title {
               padding: 0;
               position: relative;
               left: -50%;
             }
-            .m-menu-link-text {
-              display: none;
-            }
-            .m-menu-link-icon {
-              width: 100%;
-              text-align: center;
-            }
+
           }
+
+          > .m-menu-submenu {
+            display: none !important;
+          }
+
         }
       }
     }
