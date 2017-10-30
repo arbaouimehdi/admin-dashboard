@@ -1,0 +1,259 @@
+/**
+*
+*
+* Navigation
+*
+*
+*/
+
+//==== Component Mixins ====//
+
+//== Component Base
+@mixin m-build-component-nav-default-base($layout) {
+  .m-nav  {
+    padding:0;
+    margin: 0;
+    list-style: none;
+
+    > .m-nav-item {
+      display: block;
+
+      > .m-nav-link {
+        display: table;
+        table-layout: fixed;
+        width: 100%;
+        height: 100%;
+        text-decoration: none;
+        position: relative;
+        outline: none !important;
+        vertical-align: middle;
+        padding: array-get($layout, item, link, self, padding, default);
+
+        &:hover {
+          text-decoration: none;
+        }
+
+        .m-nav-link-text {
+          display: table-cell;
+          height: 100%;
+          width: 100%;
+          margin: 0;
+          padding: 0;
+          vertical-align: middle;
+          font-size: get-font-size(regular);
+          color: $link_footer_color;
+        }
+
+        .m-nav-link-title {
+          display: table-cell;
+          height: 100%;
+          padding: 0;
+          margin: 0;
+          vertical-align: middle;
+
+          > .m-nav-link-wrap {
+            display: table;
+            height: 100%;
+            margin: 0;
+            width: 100%;
+            padding: 0;
+            vertical-align: middle;
+
+            // nav item link's icon part
+            > .m-nav-link-badge {
+              display: table-cell;
+              height: 100%;
+              vertical-align: middle;
+              white-space: nowrap;
+              padding: array-get($layout, item, link, badge, padding);
+              text-align: right;
+            }
+          }
+        }
+
+        // nav item link's icon
+        .m-nav-link-icon {
+          display: table-cell;
+          height: 100%;
+          vertical-align: middle;
+          text-align: left;
+          width: array-get($layout, item, link, icon, width);
+          font-size: get-font-size(icon, '+');
+          line-height: 0;
+        }
+
+        &.m-nav-link-icon {
+          .m-nav-link-icon {
+            width: auto;
+            text-align: center;
+          }
+        }
+
+        .m-nav-link-bullet {
+          display: table-cell;
+          vertical-align: middle;
+          text-align: center;
+          width: array-get($layout, item, link, bullet, self, width);
+
+          > span {
+            vertical-align: middle;
+            display: inline-block;
+          }
+
+          &.m-nav-link-bullet-dot {
+            > span {
+              width: array-get($layout, item, link, bullet, dot, size);
+              height: array-get($layout, item, link, bullet, dot, size);
+              @include border-radius(100%);
+            }
+          }
+
+          &.m-nav-link-bullet-line {
+            > span {
+              width: array-get($layout, item, link, bullet, line, width);
+              height: array-get($layout, item, link, bullet, line, height);
+            }
+          }
+        }
+      }
+
+      &.m-nav-item-disabled {
+        cursor: not-allowed;
+      }
+
+      &.m-nav-item-last {
+        padding-bottom: 0;
+      }
+    }
+
+    > .m-nav-section {
+      display: table;
+      width: 100%;
+      vertical-align: middle;
+      margin: array-get($layout, section, self, margin, default);
+
+      &.m-nav-section-first {
+        margin-top: 0;
+      }
+
+      &.m-nav-section-last {
+        margin-bottom: 0;
+      }
+
+      .m-nav-section-text {
+        display: table-cell;
+        margin: 0;
+        vertical-align: middle;
+        font-weight: get-font-weight(boldest);
+        font-size: get-font-size(regular, '-');
+        text-transform: uppercase;
+      }
+
+      .m-nav-section-icon {
+        display: none;
+        text-align: center;
+        vertical-align: middle;
+        font-size: get-font-size(icon);
+      }
+    }
+
+    > .m-nav-separator {
+      height: 0;
+      overflow: hidden;
+      margin: array-get($layout, separator, margin, default);
+
+      &.m-nav-separator-marginles {
+        margin: 0;
+      }
+
+      &.m-nav-separator-fit {
+        margin-left: array-get($layout, separator, fit-offset);
+        margin-right: array-get($layout, separator, fit-offset);
+      }
+    }
+
+    &.m-nav-inline {
+      display: inline-block;
+      width: auto;
+      height: 100%;
+
+      &.m-nav-fluid {
+        width: 100%;
+      }
+
+      > .m-nav-item {
+        height: 100%;
+        display: inline-block;
+        vertical-align: middle;
+        padding: 0 0 0 25px;
+
+        &:first-child {
+          padding-left: 0;
+        }
+
+        > .m-nav-link {
+          width: auto;
+          padding: array-get($layout, item, link, self, padding, inline);
+
+          .m-nav-link-icon {
+            padding-right: 10px;
+          }
+
+          .m-nav-link-bullet {
+            padding-right: 10px;
+          }
+        }
+
+        &.m-nav-item-last {
+          padding-right: 0;
+
+          > .m-nav-link {
+            .m-nav-link-icon {
+              text-align: right;
+              padding-right: 0;
+            }
+
+            .m-nav-link-bullet {
+              text-align: right;
+              padding-right: 0;
+            }
+          }
+        }
+      }
+
+      > .m-nav-separator {
+        height: auto;
+        display: inline-block;
+        vertical-align: middle;
+        padding: 0 0 0 5px;
+        margin: 0;
+      }
+    }
+
+    &.m-nav-hover-bg {
+      > .m-nav-item {
+        > .m-nav-link {
+          padding: array-get($layout, item, link, self, padding, hover-bg);
+        }
+      }
+
+      > .m-nav-section {
+        margin: array-get($layout, section, self, margin, hover-bg);
+      }
+
+      > .m-nav-separator {
+        margin: array-get($layout, separator, margin, hover-bg);
+
+        &.m-nav-separator-fit {
+          margin-left: 0;
+          margin-right: 0;
+        }
+      }
+    }
+  }
+}
+
+//==== Generate Component ====//
+
+//== Component Base
+@include m-build-component-nav-default-base( array-get($m-nav, default) );

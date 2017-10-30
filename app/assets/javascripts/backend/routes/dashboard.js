@@ -26,7 +26,7 @@ export default {
 
     ui.asideMenuHover({
       targetMenu: '.m-aside-menu',
-      selector: '.m-menu-nav > .m-menu-item > .m-menu-link'
+      selector: '.m-menu-nav > .m-menu-item.m-menu-item-submenu'
     });
 
   }
