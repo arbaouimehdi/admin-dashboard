@@ -7,6 +7,10 @@
  */
 export default {
 
+  init(selector){
+    $(selector).off('click');
+  },
+
   /**
    * Toggle Sidebar
    *
@@ -94,11 +98,25 @@ export default {
           $(this).parent().removeClass(targetState);
         });
 
-        console.log('closed');
-
       }
 
     });
+
+  },
+
+  /**
+   * Aside Menu Hover
+   *
+   * @param targetMenu
+   * @param selector
+   */
+  asideMenuHover({targetMenu, selector}) {
+
+    $(selector).hover(function(){
+
+    }, function(){
+
+    })
 
   }
 
