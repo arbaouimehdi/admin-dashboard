@@ -7,6 +7,7 @@
 */
 
 //
+//
 // Layouts
 // Define the minimum and maximum dimensions at which your layout will change,
 // adapting to different screen sizes, for use in media queries.
@@ -29,6 +30,244 @@ $layout-size: (
 
   xxxl: 1600px
 ) !default;
+
+//
+//
+// General Font Weights
+$m-font-weights: (
+  thin:  200,
+  normal: 300,
+  bold: 400,
+  bolder: 500,
+  boldest: 600,
+  boldest2: 700
+);
+
+//
+//
+// General Font sizes
+$m-font-sizes: (
+  // text font sizes
+  regular: (
+    down5: 0.7rem,
+    down4: 0.75rem,
+    down3: 0.78rem,
+    down2: 0.8rem,
+    down1: 0.85rem,
+    base: 1rem,
+    up1:  1.1rem,
+    up2: 1.2rem,
+    up3: 1.3rem,
+    up4: 1.5rem,
+    up5: 1.6rem
+  ),
+
+  // icon font sizes
+  icon: (
+    down5: 0.8rem,
+    down4: 0.9rem,
+    down3: 1rem,
+    down2: 1.1rem,
+    down1: 1.2rem,
+    base: 1.3rem,
+    up1:  1.4rem,
+    up2: 1.6rem,
+    up3: 1.8rem,
+    up4: 2.0rem,
+    up5: 2.1rem
+  )
+);
+
+//
+//
+// UI State Colors
+$m-state-colors: (
+  // metronic states
+  brand: (
+    base: #716aca,
+    inverse: #ffffff
+  ),
+  metal: (
+    base: #c4c5d6,
+    inverse: #111111
+
+    //base: #f7f7fb,
+    //inverse: #9a9fae
+  ),
+  light: (
+    base: #ffffff,
+    inverse: #282a3c
+  ),
+  accent: (
+    base: #00c5dc,
+    inverse: #ffffff
+  ),
+  focus: (
+    base: #9816f4,
+    inverse: #ffffff
+  ),
+
+  // bootstrap states
+  primary: (
+    base: #5867dd,
+    inverse: #ffffff
+  ),
+  success: (
+    base: #34bfa3,
+    inverse: #ffffff
+  ),
+  info: (
+    base: #36a3f7,
+    inverse: #ffffff
+  ),
+  warning: (
+    base: #ffb822,
+    inverse: #111111
+  ),
+  danger: (
+    base: #f4516c,
+    inverse: #ffffff
+  )
+);
+
+//
+//
+// Nav Component Config
+$m-nav: (
+  // default
+  default: (
+    // self
+    self: (
+      padding: 0,
+      margin: 0
+    ),
+
+    // nav item
+    item: (
+      // item itself
+      self: (
+        margin:	0,
+      ),
+
+      // item link
+      link: (
+        // self
+        self: (
+          padding: (
+            hover-bg: 12px 30px,
+            default: 9px 0,
+            inline: 9px 0
+          )
+        ),
+
+        // link icon
+        icon:	(
+          width: 35px
+        ),
+
+        // link bullet
+        bullet:	(
+          self: (
+            width: 20px,
+          ),
+          dot: (
+            size: 4px
+          ),
+          line: (
+            width: 5px,
+            height: 1px
+          )
+        ),
+
+        // link badge
+        badge:	(
+          padding: 0px 0px 0px 5px
+        )
+      )
+    ),
+
+    // nav section
+    section: (
+      // self
+      self: (
+        padding: 0 25px,
+        margin: (
+          default: 20px 0 10px 0,
+          hover-bg: 20px 30px
+        )
+      )
+    ),
+
+    // separator
+    separator: (
+      margin: (
+        default: 15px 0,
+        hover-bg: 30px 30px
+      ),
+      fit-offset: -20px
+    )
+  ),
+
+  // grid
+  grid: (
+    // item
+    item: (
+      // self
+      self: (
+        padding: 50px 5px 50px 5px
+      ),
+
+      // icon
+      icon: (
+        font-size: 35px
+      ),
+
+      // text
+      text: (
+        margin: 10px 0 0 0
+      )
+    )
+  ),
+
+  // sticky
+  sticky: (
+    // layout
+    layout: (
+      self: (
+        z-index: 110
+      )
+    ),
+
+    // skins
+    skins: (
+      light: (
+        bg-color: #fff,
+        box-shadow: get-shadow(light)
+      ),
+
+      dark: (
+        bg-color: #555,
+        box-shadow: get-shadow(dark)
+      )
+    )
+  ),
+
+  // scroll top
+  scroll-top: (
+    // skins
+    skins: (
+      light: (
+        bg-color: #fff,
+        box-shadow: 0px 6px 12px 0px rgba(0, 0, 0, 0.2)
+      ),
+
+      dark: (
+        bg-color: #555,
+        box-shadow: 0px 6px 12px 0px rgba(0, 0, 0, 0.2)
+      )
+    )
+  )
+);
 
 //
 //
@@ -55,3 +294,6 @@ $list_hover_aside: #292b3a;
 $icon_aside: #525672;
 $section_title_aside: #464b66;
 $submenu_link: #686c89;
+
+// footer
+$link_footer_color: #6f727d;

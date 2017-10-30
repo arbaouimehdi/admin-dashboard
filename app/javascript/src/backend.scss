@@ -13,10 +13,13 @@
 ==================================*/
 @import '../../assets/stylesheets/global/config';
 @import '../../assets/stylesheets/global/mixins';
+@import '../../assets/stylesheets/global/functions';
 @import '../../assets/stylesheets/global/fonts';
 @import '../../assets/stylesheets/global/buttons';
 @import '../../assets/stylesheets/global/alerts';
 @import '../../assets/stylesheets/global/inputs';
+@import '../../assets/stylesheets/global/helpers';
+@import '../../assets/stylesheets/global/link';
 
 /*==================================
 #
@@ -29,19 +32,14 @@
 
 /*==================================
 #
-#               Global
-#
-==================================*/
-@import '../../assets/stylesheets/global/helpers';
-@import '../../assets/stylesheets/global/link';
-
-/*==================================
-#
 #               Base
 #
 ==================================*/
 @import '../../assets/stylesheets/backend/base/reset';
 @import '../../assets/stylesheets/backend/base/grid';
+@import '../../assets/stylesheets/backend/base/container';
+@import '../../assets/stylesheets/backend/base/stack';
+
 
 /*==================================
 #
@@ -49,8 +47,11 @@
 #
 ==================================*/
 @import '../../assets/stylesheets/backend/layouts/header';
+//@import '../../assets/stylesheets/backend/layouts/topbar';
+@import '../../assets/stylesheets/backend/layouts/nav';
 @import '../../assets/stylesheets/backend/layouts/aside';
 @import '../../assets/stylesheets/backend/layouts/body';
+@import '../../assets/stylesheets/backend/layouts/footer';
 
 /*==================================
 #

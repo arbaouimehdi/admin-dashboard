@@ -7,10 +7,6 @@
  */
 export default {
 
-  init(selector){
-    $(selector).off('click');
-  },
-
   /**
    * Toggle Sidebar
    *
@@ -112,11 +108,15 @@ export default {
    */
   asideMenuHover({targetMenu, selector}) {
 
-    $(selector).hover(function(){
+    // $(selector).removeClass('m-menu-item-hover')
 
-    }, function(){
-
-    })
+    // $(selector).hover(function(){
+    //
+    //   console.log('dd')
+    //
+    // }, function(){
+    //
+    // })
 
   }
 
