@@ -1,10 +1,16 @@
 <header class="m-grid-item m-header">
-  <div class="m-container">
-    <div class="m-stack">
+  <div class="m-container m-container-fluid m-container-full-height">
+    <div class="m-stack m-stack-ver m-stack-desktop">
 
-      <!-- # Brand -->
+      <%
+      ################################
+      #                              #
+      #             Brand            #
+      #                              #
+      ################################
+      %>
       <div class="m-stack-item m-brand">
-        <div class="m-stack m-stack-general">
+        <div class="m-stack m-stack-ver m-stack-general">
 
           <!-- # Logo-->
           <div class="m-stack-item m-stack-item-middle m-brand-logo">
@@ -15,22 +21,60 @@
 
           <!-- # Brand Tools -->
           <div class="m-stack-item m-stack-item-middle m-brand-tools">
-            <a href="javascript:;" id="aside-toggle" class="m-brand-icon m-brand-toggler">
+
+            <!-- # Aside Toggle -->
+            <a href="javascript:;" id="aside-toggle" class="m-brand-icon m-brand-toggler m-brand-toggler-left">
               <span></span>
             </a>
+
+            <!-- # Header Menu Toggle -->
+            <a href="javascript:;" id="aside-header-menu-toggle" class="m-brand-icon m-brand-toggler m-visible-tablet-and-mobile-inline-block">
+              <span></span>
+            </a>
+
           </div>
 
         </div>
       </div>
 
-      <!-- Menu -->
+      <%
+      ################################
+      #                              #
+      #             Menus            #
+      #                              #
+      ################################
+      %>
       <div class="m-stack-item m-stack-item-fluid m-header-head">
 
-        <!-- # Left Menu -->
-        <div class="m-header-menu"></div>
+        <%
+        ################################
+        #           Left Menu          #
+        ################################
+        %>
+        <div class="m-header-menu m-aside-header-menu-mobile">
+          <ul class="m-menu-nav m-menu-nav-submenu-arrow">
 
-        <!-- # Right Menu -->
-        <div class="m-top-bar m-stack-general"></div>
+            <!-- # -->
+            <li class="m-menu-item m-menu-item-submenu m-menu-item-rel">
+              <a  href="#" class="m-menu-link m-menu-toggle">
+                <i class="m-menu-link-icon flaticon-add"></i>
+                <span class="m-menu-link-text">
+												Actions
+											</span>
+                <i class="m-menu-hor-arrow la la-angle-down"></i>
+                <i class="m-menu-ver-arrow la la-angle-right"></i>
+              </a>
+            </li>
+
+          </ul>
+        </div>
+
+        <%
+        ################################
+        #           Right Menu         #
+        ################################
+        %>
+        <div class="m-topbar m-stack m-stack-ver m-stack-general"></div>
 
       </div>
 
