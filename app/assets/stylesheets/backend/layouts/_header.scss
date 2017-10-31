@@ -179,12 +179,71 @@
     height: 100%;
     margin: 0 0 0 10px;
 
+
+    /*
+.m-header-menu .m-menu__nav > .m-menu__item .m-menu__submenu {
+    width: 275px;
+    margin: 0 auto;
+    left: auto;
+    right: auto;
+}
+    */
+
     .m-menu-nav {
       list-style: none;
       margin: 0;
       padding: 0;
       display: table-row;
       height: 100%;
+
+      .m-menu-item {
+
+        &.m-menu-item-hover {
+
+          .m-menu-submenu {
+
+            > .m-menu-subnav {
+
+              > .m-menu-item {
+
+                &.m-menu-item-hover {
+
+                  .m-menu-submenu {
+                    display: block;
+                    animation: m-header-menu-submenu-fade-in .3s ease 1, m-header-menu-submenu-move-up .3s ease-out 1;
+                  }
+
+                }
+
+              }
+
+            }
+
+          }
+
+        }
+
+      }
+
+      &.m-menu-nav-submenu-arrow {
+
+        > .m-menu-item-submenu {
+
+          > .m-menu-submenu {
+
+            .m-menu-submenu {
+
+              &.m-menu-submenu-right {
+                top: -10px;
+              }
+
+            }
+
+          }
+
+        }
+
+      }
 
       > .m-menu-item {
 
@@ -259,17 +318,22 @@
           display: none;
           z-index: 102;
 
-          .m-menu-submenu-left {
-            right: auto;
-            left: 0;
-          }
-
           &.m-menu-submenu-classic {
 
             > .m-menu-subnav {
               padding: 20px 0;
             }
 
+          }
+
+          .m-menu-submenu-left {
+            right: auto;
+            left: 0;
+          }
+
+          .m-menu-submenu-right {
+            right: 0;
+            left: auto;
           }
 
           .m-menu-subnav {
@@ -287,6 +351,22 @@
 
             > .m-menu-item {
               padding: 0;
+
+              &.m-menu-item-submenu {
+
+                > .m-menu-submenu {
+                  top: 0;
+                  display: none;
+                  margin-top: 0;
+
+                  &.m-menu-submenu-right {
+                    left: 100%;
+                    right: auto;
+                  }
+
+                }
+
+              }
 
               > .m-menu-link {
                 padding: 9px 30px;
