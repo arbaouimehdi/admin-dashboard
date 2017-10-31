@@ -24,6 +24,11 @@ export default {
       targetState: 'm-menu-item-open'
     });
 
+    ui.headerMenuToggle({
+      selector: '#aside-header-menu-toggle',
+      target: '.m-header-menu',
+    });
+
     ui.asideMenuHover({
       targetMenu: '.m-aside-menu',
       selector: '.m-menu-nav > .m-menu-item.m-menu-item-submenu'

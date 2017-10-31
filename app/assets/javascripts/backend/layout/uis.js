@@ -36,6 +36,36 @@ export default {
   },
 
   /**
+   * Toggle Header Menu
+   *
+   * @param selector
+   * @param target
+   */
+  headerMenuToggle({selector, target}) {
+
+    //
+    $(selector).on('click', function(){
+
+      $(target)
+        .addClass('m-aside-header-menu-mobile-on')
+        .next()
+        .append('<div class="m-aside-header-menu-mobile-overlay"></div>')
+
+    });
+
+    //
+    $('.m-header-head').on('click','.m-aside-header-menu-mobile-overlay', function(){
+
+      $(target)
+        .removeClass('m-aside-header-menu-mobile-on');
+
+      $(this).remove();
+
+    })
+
+  },
+
+  /**
    * Aside Menu
    *
    * @param targetMenu
