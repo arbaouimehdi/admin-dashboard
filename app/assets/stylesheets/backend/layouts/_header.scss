@@ -9,6 +9,21 @@
   background-color: #fff;
 }
 
+.m-header-menu {
+
+  .m-menu-nav {
+
+    .m-menu-inner, .m-menu-submenu {
+      display: none;
+      float: none;
+      margin: 0;
+      padding: 0;
+    }
+
+  }
+
+}
+
 .m-brand {
   transition: all 0.3s ease;
   height: 70px;
@@ -130,10 +145,6 @@
 *
 * Responsive
 *
-.m-header-menu .m-menu__nav > .m-menu__item > .m-menu__heading .m-menu__link-text,
-.m-header-menu .m-menu__nav > .m-menu__item > .m-menu__link .m-menu__link-text {
-    color: $color_3;
-}
 *
 */
 
@@ -231,6 +242,111 @@
 
           &:hover, &:active, &:focus {
             text-decoration: none;
+          }
+
+        }
+
+        .m-menu-submenu {
+
+          position: absolute;
+          width: 275px;
+          margin: 0 auto;
+          top: 100%;
+          left: auto;
+          right: auto;
+          transform: translateZ(0);
+          -webkit-transform-style: preserve-3d;
+          display: none;
+          z-index: 102;
+
+          .m-menu-submenu-left {
+            right: auto;
+            left: 0;
+          }
+
+          &.m-menu-submenu-classic {
+
+            > .m-menu-subnav {
+              padding: 20px 0;
+            }
+
+          }
+
+          .m-menu-subnav {
+            background-color: $light;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            border-radius: 4px;
+          }
+
+          > .m-menu-subnav {
+            padding: 0;
+            background-color: #fff;
+            box-shadow: 0 0 15px 1px rgba(113, 106, 202, 0.2);
+
+            > .m-menu-item {
+              padding: 0;
+
+              > .m-menu-link {
+                padding: 9px 30px;
+
+                .m-menu-link-icon {
+                  font-size: 1.4rem;
+                  width: 33px;
+                  text-align: left;
+                  padding: 0;
+                  line-height: 0;
+                }
+
+                .m-menu-link-text {
+                  font-weight: 400;
+                  font-size: 1rem;
+                  text-transform: initial;
+                  color: $link_menu_text;
+                }
+
+                > .m-menu-link-icon {
+                  color: $link_icon;
+                }
+
+              }
+
+            }
+
+          }
+
+        }
+
+        .m-menu-inner, .m-menu-subnav {
+          list-style: none;
+          margin: 0;
+          padding: 0;
+
+          > .m-menu-item {
+            display: block;
+            margin: 0;
+            padding: 10px 20px;
+
+            .m-menu-link {
+              display: table;
+              table-layout: fixed;
+              text-decoration: none;
+              position: relative;
+              vertical-align: middle;
+              width: 100%;
+
+              .m-menu-link-icon {
+                display: table-cell;
+                vertical-align: middle;
+                padding: 0;
+                font-size: 1.4rem;
+                width: 33px;
+                text-align: left;
+              }
+
+            }
+
           }
 
         }
@@ -348,6 +464,12 @@
           padding: 0;
         }
 
+        &.m-menu-item-open {
+          > .m-menu-submenu, > .m-menu-inner {
+            display: block;
+          }
+        }
+
         > .m-menu-heading, > .m-menu-link {
 
           .m-menu-link-icon {
@@ -365,17 +487,132 @@
             vertical-align: middle;
           }
 
+          .m-menu-ver-arrow {
+            display: table-cell;
+            vertical-align: middle;
+            line-height: 0;
+            height: 100%;
+          }
+
           .m-menu-hor-arrow {
             display: none;
           }
 
         }
 
+        > .m-menu-link {
+          display: table;
+          table-layout: fixed;
+          width: 100%;
+          margin: 0;
+          text-decoration: none;
+          position: relative;
+          outline: none;
+          padding: 0;
+        }
+
+      }
+
+      .m-menu-inner, .m-menu-submenu {
+        display: none;
+        float: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      .m-menu-subnav {
+        padding: 0;
+        width: 100%;
+        margin: 0;
+        list-style: none;
       }
 
       > .m-menu-item {
         position: relative;
         margin: 0;
+
+        &:hover {
+          > .m-menu-heading, > .m-menu-link {
+            background: $header_hover;
+          }
+        }
+
+        .m-menu-submenu {
+
+          .m-menu-item {
+            margin: 0;
+
+            &:hover {
+
+              > .m-menu-heading, > .m-menu-link {
+                background: $header_hover;
+              }
+
+            }
+
+            > .m-menu-heading, > .m-menu-link {
+              height: 40px;
+
+              .m-menu-link-icon {
+                color: $link_2;
+                text-align: left;
+                width: 35px;
+                font-size: 1.35rem;
+              }
+
+              .m-menu-link-text {
+                color: $header_link_2;
+                font-weight: 400;
+                font-size: 1rem;
+                text-transform: initial;
+              }
+
+              .m-menu-ver-arrow, .m-menu-hor-arrow {
+                text-align: right;
+                width: 20px;
+                font-size: 0.7rem;
+                color: $link_2;
+              }
+
+            }
+
+          }
+        }
+
+        > .m-menu-submenu {
+
+          > .m-menu-subnav {
+
+            > .m-menu-item {
+
+              > .m-menu-link {
+                padding: 0 30px;
+                padding-left: 50px;
+              }
+
+              > .m-menu-submenu {
+
+                > .m-menu-subnav {
+                  padding: 0;
+
+                  > .m-menu-item {
+
+                    .m-menu-link {
+                      padding: 0 30px;
+                      padding-left: 75px;
+                    }
+
+                  }
+
+                }
+
+              }
+
+            }
+
+          }
+
+        }
 
         > .m-menu-link {
           padding: 9px 30px;
@@ -465,6 +702,5 @@
   .m-visible-tablet-and-mobile-inline-block {
     display: inline-block !important;
   }
-
 
 }

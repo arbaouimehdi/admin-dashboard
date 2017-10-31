@@ -15,7 +15,7 @@ export default {
    * @param targetState
    * @param togglerState
    */
-  asideToggle({selector, target, targetState, togglerState}){
+  asideMenuToggle({selector, target, targetState, togglerState}){
 
     $(selector).on('click', function(){
 
@@ -25,7 +25,7 @@ export default {
 
       //
       if ($(this).hasClass(togglerState)) {
-        $(`${target}`).addClass(targetState);
+        $(`${target}`).addClass(targetState)
       }
       else {
         $(`${target}`).removeClass(targetState);
@@ -40,24 +40,26 @@ export default {
    *
    * @param selector
    * @param target
+   * @param overlay
+   * @param mobileClass
    */
-  headerMenuToggle({selector, target}) {
+  headerMenuToggle({selector, target, overlay, mobileClass}) {
 
     //
     $(selector).on('click', function(){
 
       $(target)
-        .addClass('m-aside-header-menu-mobile-on')
+        .addClass(mobileClass)
         .next()
-        .append('<div class="m-aside-header-menu-mobile-overlay"></div>')
+        .append(`<div class="${overlay}"></div>`)
 
     });
 
     //
-    $('.m-header-head').on('click','.m-aside-header-menu-mobile-overlay', function(){
+    $('.m-header-head').on('click', `.${overlay}`, function(){
 
       $(target)
-        .removeClass('m-aside-header-menu-mobile-on');
+        .removeClass(mobileClass);
 
       $(this).remove();
 
@@ -72,7 +74,7 @@ export default {
    * @param selector
    * @param targetState
    */
-  asideMenu({targetMenu, selector, targetState}){
+  menu({targetMenu, selector, targetState}){
 
     let sub_menu,
         not_expanded_list,
