@@ -42,10 +42,11 @@ group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'capybara', '~> 2.15.0'
   gem 'rspec-rails', '~> 3.6'
+  gem 'factory_bot_rails', '~> 4.0'
   gem 'rspec-html-matchers'
-  gem 'database_cleaner', "~> 1.6", ">= 1.6.1"
-  gem 'guard-rspec', "~> 4.7", ">= 4.7.3", require: false
-  gem 'awesome_print', "~> 1.8", require: "ap"
+  gem 'database_cleaner', '~> 1.6', '>= 1.6.1'
+  gem 'guard-rspec', '~> 4.7', '>= 4.7.3', require: false
+  gem 'awesome_print', '~> 1.8', require: 'ap'
 end
 
 # Development
